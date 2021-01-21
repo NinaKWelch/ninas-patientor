@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
-import diagnosisRouter from './routes/diagnosis';
-import patientRouter from './routes/patients';
+import diagnosisRouter from './src/routes/diagnosis';
+import patientRouter from './src/routes/patients';
 
 const app = express();
 
@@ -11,7 +11,9 @@ app.use(express.json());
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 app.use(cors());
 
-const PORT = 3001;
+// Heroku set up for express
+// https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
+const PORT = process.env.PORT || 3001;
 
 app.use('/api/diagnosis', diagnosisRouter);
 app.use('/api/patients', patientRouter);
