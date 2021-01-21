@@ -1,22 +1,5 @@
 # ninas-patientor
 
-## Development 
-
-1. Run `npm start` to 
-
-## Production
-
-1. Remove previous build with `rm -rf ./build/` (backend)
-
-2. Run `npm run tsc` to create a new build (backend)
-
-3. Create a directory for the React front-end with `mkdir -p ./build/public/react/`
-
-
-2. Aun `git push heroku main` to push the new build to heroku
-
-4. Any issues, check logs with `heroku logs -t`
-
 ## Frontend integration
 
 1. Add a proxy for production to package.json (front-end)
@@ -31,7 +14,24 @@
 export const apiBaseUrl = "/api";
 ```
 
-3. Run `npm run build` (front-end)
+## Production
+
+1. Remove previous build with `rm -rf ./build/` (backend)
+
+2. Run `npm run tsc` to create a new build (backend)
+
+3. Run `npm run build` to create a new build (front-end)
+
+4. Change the name of front-end _build_ folder to _react-app_ and move it to the backend _build_ folder 
+
+5. Commit changes to git
+
+6. Run `git push heroku main` to push the new build to heroku
+
+4. Any issues, check logs with `heroku logs -t`
+
+
+
 
 
 
