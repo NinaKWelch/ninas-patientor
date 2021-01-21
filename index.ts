@@ -14,7 +14,7 @@ app.use(cors());
 
 // show front-end static content in production
 // http://expressjs.com/en/starter/static-files.html
-app.use(express.static('react-app'));
+app.use(express.static('build/react-app'));
 
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
