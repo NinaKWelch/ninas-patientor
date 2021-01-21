@@ -13,6 +13,9 @@ app.use(express_1.default.json());
 // cross-origin resource sharing
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 app.use(cors_1.default());
+// show front-end static content in production
+// http://expressjs.com/en/starter/static-files.html
+app.use(express_1.default.static('react-app'));
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 const PORT = process.env.PORT || 3001;

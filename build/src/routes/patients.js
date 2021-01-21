@@ -5,14 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const patientService_1 = __importDefault(require("../services/patientService"));
-const utils_1 = require("../utils");
+const utils_backend_1 = require("../utils_backend");
 const router = express_1.default.Router();
 router.get('/', (_req, res) => {
     res.send(patientService_1.default.getPublicPatientData());
 });
 router.get('/:id', (req, res) => {
     try {
-        const id = utils_1.toPatientId(req.params.id);
+        const id = utils_backend_1.toPatientId(req.params.id);
         const patient = patientService_1.default.getPatient(id);
         patient ? res.send(patient) : res.status(404).end();
     }
@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
 });
 router.get('/:id/entries', (req, res) => {
     try {
-        const id = utils_1.toPatientId(req.params.id);
+        const id = utils_backend_1.toPatientId(req.params.id);
         const patient = patientService_1.default.getPatient(id);
         patient ? res.send(patient.entries) : res.status(404).end();
     }
@@ -36,7 +36,7 @@ router.get('/:id/entries', (req, res) => {
 });
 router.post('/', (req, res) => {
     try {
-        const newPatient = utils_1.toNewPatient(req.body);
+        const newPatient = utils_backend_1.toNewPatient(req.body);
         const addedPatient = patientService_1.default.addPatient(newPatient);
         res.json(addedPatient);
     }
@@ -48,8 +48,8 @@ router.post('/', (req, res) => {
 });
 router.post('/:id/entries', (req, res) => {
     try {
-        const id = utils_1.toPatientId(req.params.id);
-        const newEntry = utils_1.toNewEntry(req.body);
+        const id = utils_backend_1.toPatientId(req.params.id);
+        const newEntry = utils_backend_1.toNewEntry(req.body);
         const updatedEntries = patientService_1.default.addPatientEntry(id, newEntry);
         res.json(updatedEntries);
     }

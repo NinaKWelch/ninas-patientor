@@ -7,9 +7,14 @@ const app = express();
 
 // json-parser https://expressjs.com/en/api.html
 app.use(express.json());
+
 // cross-origin resource sharing
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 app.use(cors());
+
+// show front-end static content in production
+// http://expressjs.com/en/starter/static-files.html
+app.use(express.static('react-app'));
 
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment

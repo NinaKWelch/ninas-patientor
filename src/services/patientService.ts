@@ -1,5 +1,5 @@
 import patients from '../../data/patients';
-import { Patient, PublicPatient, NewPatient, NewEntry } from '../types';
+import { Patient, PublicPatient, NewPatient, NewEntry } from '../types_backend';
 
 const getPatients = (): Patient[] => patients;
 
