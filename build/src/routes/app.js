@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 const path_1 = __importDefault(require("path"));
 /* GET React App */
-router.get(['/', '/**'], (_req, res) => {
-    res.sendFile(path_1.default.join(__dirname, '../../build/react-app', 'index.html'));
+router.get('*', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, '../../react-app'));
 });
 exports.default = router;
