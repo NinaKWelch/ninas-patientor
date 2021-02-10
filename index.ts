@@ -18,13 +18,13 @@ app.use(cors());
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static(path.join(__dirname, 'react-app')));
 
+app.use('/', appRouter);
+app.use('/api/diagnosis', diagnosisRouter);
+app.use('/api/patients', patientRouter);
+
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 const PORT = process.env.PORT || 3001;
-
-app.use('/api/diagnosis', diagnosisRouter);
-app.use('/api/patients', patientRouter);
-app.use('/', appRouter);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

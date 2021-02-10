@@ -18,12 +18,12 @@ app.use(cors_1.default());
 // show front-end static content in production
 // http://expressjs.com/en/starter/static-files.html
 app.use(express_1.default.static(path_1.default.join(__dirname, 'react-app')));
+app.use('/', app_1.default);
+app.use('/api/diagnosis', diagnosis_1.default);
+app.use('/api/patients', patients_1.default);
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 const PORT = process.env.PORT || 3001;
-app.use('/api/diagnosis', diagnosis_1.default);
-app.use('/api/patients', patients_1.default);
-app.use('/', app_1.default);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
