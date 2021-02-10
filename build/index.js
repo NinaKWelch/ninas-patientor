@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const diagnosis_1 = __importDefault(require("./src/routes/diagnosis"));
 const patients_1 = __importDefault(require("./src/routes/patients"));
 const app = express_1.default();
+const path_1 = __importDefault(require("path"));
 // json-parser https://expressjs.com/en/api.html
 app.use(express_1.default.json());
 // cross-origin resource sharing
@@ -15,7 +16,7 @@ app.use(express_1.default.json());
 app.use(cors_1.default());
 // show front-end static content in production
 // http://expressjs.com/en/starter/static-files.html
-app.use(express_1.default.static('build/react-app'));
+app.use(express_1.default.static(path_1.default.join(__dirname, 'build/react-app')));
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
 const PORT = process.env.PORT || 3001;
