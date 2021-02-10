@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './src/routes/diagnosis';
 import patientRouter from './src/routes/patients';
+import appRouter from './src/routes/app';
 
 const app = express();
 import path from 'path';
@@ -23,6 +24,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use('/api/diagnosis', diagnosisRouter);
 app.use('/api/patients', patientRouter);
+app.use('/', appRouter);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

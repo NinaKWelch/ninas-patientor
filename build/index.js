@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const diagnosis_1 = __importDefault(require("./src/routes/diagnosis"));
 const patients_1 = __importDefault(require("./src/routes/patients"));
+const app_1 = __importDefault(require("./src/routes/app"));
 const app = express_1.default();
 const path_1 = __importDefault(require("path"));
 // json-parser https://expressjs.com/en/api.html
@@ -22,6 +23,7 @@ app.use(express_1.default.static(path_1.default.join(__dirname, 'build/react-app
 const PORT = process.env.PORT || 3001;
 app.use('/api/diagnosis', diagnosis_1.default);
 app.use('/api/patients', patients_1.default);
+app.use('/', app_1.default);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
