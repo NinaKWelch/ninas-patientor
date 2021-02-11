@@ -2,10 +2,9 @@ import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './src/routes/diagnosis';
 import patientRouter from './src/routes/patients';
-import appRouter from './src/routes/app';
 
-const app = express();
 import path from 'path';
+const app = express();
 
 // json-parser https://expressjs.com/en/api.html
 app.use(express.json());
@@ -15,12 +14,16 @@ app.use(express.json());
 app.use(cors());
 
 // show front-end static content in production
-// http://expressjs.com/en/starter/static-files.html
+// https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing
 app.use(express.static(path.join(__dirname, 'react-app')));
 
-app.use('/', appRouter);
 app.use('/api/diagnosis', diagnosisRouter);
 app.use('/api/patients', patientRouter);
+
+/* GET React App */
+app.get('/*', (_req, res) => {  
+    res.sendFile(path.join(__dirname, 'react-app', 'index.html'));
+});
 
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment
