@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.toNewEntry = exports.toPatientId = exports.toNewPatient = void 0;
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-const types_backend_1 = require("./types_backend");
+const types_1 = require("./types");
 const isString = (text) => (typeof text === 'string' || text instanceof String);
 const parseValue = (key, value) => {
     if (!value || !isString(value)) {
@@ -18,9 +19,9 @@ const parseDate = (date) => {
     }
     return date;
 };
-const isGender = (param) => (param === types_backend_1.Gender.Other ||
-    param === types_backend_1.Gender.Male ||
-    param === types_backend_1.Gender.Female);
+const isGender = (param) => (param === types_1.Gender.Other ||
+    param === types_1.Gender.Male ||
+    param === types_1.Gender.Female);
 const parseGender = (gender) => {
     if (!gender || !isGender(gender)) {
         throw new Error('Incorrect or missing gender');
@@ -36,10 +37,10 @@ const parseType = (type) => {
     }
     return type;
 };
-const isRating = (param) => (param === types_backend_1.HealthCheckRating.Healthy ||
-    param === types_backend_1.HealthCheckRating.LowRisk ||
-    param === types_backend_1.HealthCheckRating.HighRisk ||
-    param === types_backend_1.HealthCheckRating.CriticalRisk);
+const isRating = (param) => (param === types_1.HealthCheckRating.Healthy ||
+    param === types_1.HealthCheckRating.LowRisk ||
+    param === types_1.HealthCheckRating.HighRisk ||
+    param === types_1.HealthCheckRating.CriticalRisk);
 const parseRating = (rating) => {
     if (!rating || !isRating(rating)) {
         throw new Error('Incorrect or missing rating');

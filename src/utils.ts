@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { NewPatient, NewEntry, Gender, Type, HealthCheckRating } from './types_backend';
+import { NewPatient, NewEntry, Gender, Type, HealthCheckRating } from './types';
 
 const isString = (text: unknown): text is string => (
     typeof text === 'string' || text instanceof String

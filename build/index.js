@@ -20,6 +20,9 @@ app.use(express_1.default.static(path_1.default.join(__dirname, 'react-app')));
 app.use('/api/diagnosis', diagnosis_1.default);
 app.use('/api/patients', patients_1.default);
 /* GET React App */
+app.get('/patients/*', (_req, res) => {
+    res.sendFile(path_1.default.join(__dirname, 'react-app', 'index.html'));
+});
 app.get('/*', (_req, res) => {
     res.sendFile(path_1.default.join(__dirname, 'react-app', 'index.html'));
 });

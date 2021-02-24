@@ -13,12 +13,12 @@ app.use(express.json());
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 app.use(cors());
 
+app.use('/api/diagnosis', diagnosisRouter);
+app.use('/api/patients', patientRouter);
+
 // show front-end static content in production
 // https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing
 app.use(express.static(path.join(__dirname, 'react-app')));
-
-app.use('/api/diagnosis', diagnosisRouter);
-app.use('/api/patients', patientRouter);
 
 /* GET React App */
 app.get('/*', (_req, res) => {  

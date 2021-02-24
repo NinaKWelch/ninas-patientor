@@ -9,12 +9,22 @@ const getPatient = (id) => {
     const patient = patients_1.default.find(p => p.id === id);
     return patient ? patient : undefined;
 };
-const getPublicPatientData = () => (patients_1.default.map(({ id, name, dateOfBirth, gender, occupation }) => ({
+const getRating = (arr) => {
+    const checks = arr.map((obj) => obj.type === "HealthCheck" ? obj.healthCheckRating : null);
+    // get the latest rating
+    const lastCheck = checks.pop();
+    if (typeof lastCheck === "number") {
+        return lastCheck;
+    }
+    return "Not given";
+};
+const getPublicPatientData = () => (patients_1.default.map(({ id, name, dateOfBirth, gender, occupation, entries }) => ({
     id,
     name,
     dateOfBirth,
     gender,
-    occupation
+    occupation,
+    healthRating: getRating(entries)
 })));
 const getId = () => {
     const digits = 'abcdefghijklmnopqrstuvwxyz0123456789';
