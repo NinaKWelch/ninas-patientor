@@ -37,14 +37,15 @@ const addPatient = (patient) => {
     patients_1.default.push(newPatient);
     return newPatient;
 };
-const addPatientEntry = (patientId, entry) => {
-    const patient = patients_1.default.find(patient => patient.id === patientId);
+const addPatientEntry = (entry) => {
     const newEntry = Object.assign({ id: getId() }, entry);
+    return newEntry;
+};
+const updatePatient = (id, entry) => {
+    const patient = getPatient(id);
     if (patient) {
-        const updatedPatient = Object.assign(Object.assign({}, patient), { entries: [...patient.entries, newEntry] });
-        const updatedEntries = updatedPatient.entries;
-        patients_1.default.filter(p => p.id !== updatedPatient.id ? patient : updatedPatient);
-        return updatedEntries;
+        patient.entries.push(entry);
+        return patient;
     }
     return undefined;
 };
@@ -53,5 +54,6 @@ exports.default = {
     getPatient,
     getPublicPatientData,
     addPatient,
-    addPatientEntry
+    addPatientEntry,
+    updatePatient
 };

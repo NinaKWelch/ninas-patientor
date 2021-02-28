@@ -7,9 +7,11 @@ const express_1 = __importDefault(require("express"));
 const patientService_1 = __importDefault(require("../services/patientService"));
 const utils_1 = require("../utils");
 const router = express_1.default.Router();
+// get patient list
 router.get('/', (_req, res) => {
     res.send(patientService_1.default.getPublicPatientData());
 });
+// get patient
 router.get('/:id', (req, res) => {
     try {
         const id = utils_1.toPatientId(req.params.id);
@@ -22,6 +24,7 @@ router.get('/:id', (req, res) => {
             : res.status(500).send("Unknown Error");
     }
 });
+// get patient entries
 router.get('/:id/entries', (req, res) => {
     try {
         const id = utils_1.toPatientId(req.params.id);
@@ -34,6 +37,7 @@ router.get('/:id/entries', (req, res) => {
             : res.status(500).send("Unknown Error");
     }
 });
+// add patient to patient list
 router.post('/', (req, res) => {
     try {
         const newPatient = utils_1.toNewPatient(req.body);
@@ -46,12 +50,28 @@ router.post('/', (req, res) => {
             : res.status(500).send("Unknown Error");
     }
 });
+// add patient entry to patient
 router.post('/:id/entries', (req, res) => {
     try {
-        const id = utils_1.toPatientId(req.params.id);
         const newEntry = utils_1.toNewEntry(req.body);
-        const updatedEntries = patientService_1.default.addPatientEntry(id, newEntry);
-        res.json(updatedEntries);
+        const addedEntry = patientService_1.default.addPatientEntry(newEntry);
+        res.json(addedEntry);
+    }
+    catch (err) {
+        err instanceof Error
+            ? res.status(400).send(err.message)
+            : res.status(500).send("Unknown Error");
+    }
+});
+// update patient
+router.put('/:id', (req, res) => {
+    try {
+        const id = utils_1.toPatientId(req.params.id);
+        // the entry has already been parsed
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        const entry = req.body;
+        const updatedPatient = patientService_1.default.updatePatient(id, entry);
+        res.json(updatedPatient);
     }
     catch (err) {
         err instanceof Error

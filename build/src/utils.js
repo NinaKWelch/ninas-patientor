@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toNewEntry = exports.toPatientId = exports.toNewPatient = void 0;
+exports.toNewEntry = exports.toNewPatient = exports.toPatientId = void 0;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
@@ -54,6 +54,8 @@ const parseCodes = (codes) => {
     }
     return codes;
 };
+const toPatientId = (id) => parseValue('id', id);
+exports.toPatientId = toPatientId;
 const toNewPatient = (patient) => ({
     name: parseValue('name', patient.name),
     dateOfBirth: parseDate(patient.dateOfBirth),
@@ -62,8 +64,6 @@ const toNewPatient = (patient) => ({
     occupation: parseValue('occupation', patient.occupation)
 });
 exports.toNewPatient = toNewPatient;
-const toPatientId = (id) => parseValue('id', id);
-exports.toPatientId = toPatientId;
 const toNewEntry = (entry) => {
     const newEntry = {
         description: parseValue('description', entry.description),
