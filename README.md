@@ -60,7 +60,12 @@ export const apiBaseUrl = "/api";
 ## Built with
 
 * [create-react-app](https://github.com/facebook/create-react-app)
-* [TypeScript]([https://www.typescriptlang.org/](https://github.com/microsoft/TypeScript))
+* [TypeScript](https://github.com/microsoft/TypeScript)
+* [formik](https://github.com/jaredpalmer/formik)
+* [yup](https://github.com/jquense/yup)
+* [material-ui](https://github.com/mui/material-ui)
+* [axios](https://github.com/axios/axios)
+* [expressjs](https://github.com/expressjs)
 * [heroku](https://github.com/heroku)
 
 ## To do
