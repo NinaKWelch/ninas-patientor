@@ -1,8 +1,22 @@
 # ninas-patientor
 
-## Webapp
+Full Stack Open 2019 Project
+
+## Website
 
 https://cryptic-harbor-34971.herokuapp.com/
+
+## Screenshots
+
+### Mobile
+
+### Desktop
+
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458773/patientor_1_zyqq20.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458770/patientor_2_rkggzk.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458778/patientor_3_rls9us.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458778/patientor_4_syoiuz.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458772/patientor_5_xfdhy4.png)
 
 ## Frontend integration
 
