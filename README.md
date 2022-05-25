@@ -24,7 +24,7 @@ https://cryptic-harbor-34971.herokuapp.com/
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458770/patientor_2_rkggzk.png)
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458778/patientor_3_rls9us.png)
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458778/patientor_4_syoiuz.png)
-![](https://res.cloudinary.com/ninaw/image/upload/v1653459143/c_scale,w_420/patientor_6_ktcr0y.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653459143/patientor_6_ktcr0y.png)
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_420/v1653458772/patientor_5_xfdhy4.png)
 
 ## Frontend integration
