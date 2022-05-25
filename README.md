@@ -57,8 +57,14 @@ export const apiBaseUrl = "/api";
 
 4. Any issues, check logs with `heroku logs -t`
 
+## Built with
 
+* [create-react-app](https://github.com/facebook/create-react-app)
+* [TypeScript]([https://www.typescriptlang.org/](https://github.com/microsoft/TypeScript))
+* [heroku](https://github.com/heroku)
 
+## To do
+* Make this a Progressive Web App
 
 
 
