@@ -10,8 +10,8 @@ https://cryptic-harbor-34971.herokuapp.com/
 
 ### Mobile
 
-![](https://res.cloudinary.com/ninaw/image/c_scale,w_280/upload/v1653459368/patientor_7_kjrbpt.png)
-![](https://res.cloudinary.com/ninaw/image/c_scale,w_280/upload/v1653459362/patientor_12_sobw7u.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_280/v1653459368/patientor_7_kjrbpt.png)
+![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_280/v1653459362/patientor_12_sobw7u.png)
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_280/v1653459368/patientor_9_rikchj.png)
 ![](https://res.cloudinary.com/ninaw/image/upload//c_scale,w_280/v1653459367/patientor_8_z1zhdw.png)
 ![](https://res.cloudinary.com/ninaw/image/upload/c_scale,w_280/v1653459366/patientor_10_i34mz0.png)
