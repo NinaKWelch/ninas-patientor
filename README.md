@@ -10,19 +10,15 @@ https://cryptic-harbor-34971.herokuapp.com/
 
 ## Frontend integration
 
-1. Add a proxy for production to package.json (front-end)
-
-```
-"proxy": "http://localhost:3001",
-```
-
-2. Change the base url in _constants.ts_ file (front-end)
+1. Change the base url in _constants.ts_ file (front-end)
 
 ```
 export const apiBaseUrl = "/api";
 ```
 
 ## Production
+
+Change _index.ts_ from development to production
 
 1. Remove previous build with `rm -rf ./build/` (backend)
 
