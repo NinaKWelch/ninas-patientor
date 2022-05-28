@@ -1,3 +1,4 @@
+/* DEVELOPMENT
 import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './src/routes/diagnosis';
@@ -16,8 +17,9 @@ app.use('/api/patients', patientRouter);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+*/
 
-/* PROCUTION 
+/* PRODUCTION */
 import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './src/routes/diagnosis';
@@ -39,9 +41,8 @@ app.use('/api/patients', patientRouter);
 // show front-end static content in production
 // https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing
 app.use(express.static(path.join(__dirname, 'react-app')));
-*/
+
 /* GET React App */
-/*
 app.get('/*', (_req, res) => {  
     res.sendFile(path.join(__dirname, 'react-app', 'index.html'));
 });
@@ -53,4 +54,3 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-*/
