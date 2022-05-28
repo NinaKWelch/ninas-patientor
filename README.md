@@ -10,7 +10,7 @@ https://cryptic-harbor-34971.herokuapp.com/
 
 ## Frontend integration
 
-1. Change the base url in _constants.ts_ file (front-end)
+Change the base url in _constants.ts_ file (front-end)
 
 ```
 export const apiBaseUrl = "/api";
