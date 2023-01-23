@@ -6,7 +6,7 @@ This repository contains server files, the client files are at [ninas-patientor-
 
 ## Website
 
-https://cryptic-harbor-34971.herokuapp.com/
+https://rocky-beach-20269.herokuapp.com
 
 ## Frontend integration
 

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Patient database",
   "main": "index.ts",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "tsc": "tsc",
     "dev": "ts-node-dev index.ts",

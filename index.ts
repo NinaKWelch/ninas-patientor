@@ -1,25 +1,3 @@
-/* DEVELOPMENT
-import express from 'express';
-import cors from 'cors';
-import diagnosisRouter from './src/routes/diagnosis';
-import patientRouter from './src/routes/patients';
-
-const app = express();
-
-app.use(express.json());
-app.use(cors());
-
-const PORT = 3001;
-
-app.use('/api/diagnosis', diagnosisRouter);
-app.use('/api/patients', patientRouter);
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-*/
-
-/* PRODUCTION */
 import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './src/routes/diagnosis';
@@ -46,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'react-app')));
 app.get('/*', (_req, res) => {  
     res.sendFile(path.join(__dirname, 'react-app', 'index.html'));
 });
+
 
 // Heroku set up for express
 // https://devcenter.heroku.com/articles/preparing-a-codebase-for-heroku-deployment

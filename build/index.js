@@ -1,29 +1,8 @@
 "use strict";
-/* DEVELOPMENT
-import express from 'express';
-import cors from 'cors';
-import diagnosisRouter from './src/routes/diagnosis';
-import patientRouter from './src/routes/patients';
-
-const app = express();
-
-app.use(express.json());
-app.use(cors());
-
-const PORT = 3001;
-
-app.use('/api/diagnosis', diagnosisRouter);
-app.use('/api/patients', patientRouter);
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-*/
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-/* PRODUCTION */
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const diagnosis_1 = __importDefault(require("./src/routes/diagnosis"));
