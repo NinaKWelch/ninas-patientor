@@ -44,9 +44,3 @@ Change _index.ts_ from development to production
 * [axios](https://github.com/axios/axios)
 * [expressjs](https://github.com/expressjs)
 * [heroku](https://github.com/heroku)
-
-## To do
-* Make this a Progressive Web App
-
-
-
